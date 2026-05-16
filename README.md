@@ -1,5 +1,5 @@
 # 🚛 Logistics & Transportation Analytics Dashboard
-### Power BI Capstone Project — Mamah Celestina
+### Power BI Capstone Project — Mamah Celestina Nkechi
 
 ---
 
@@ -30,14 +30,23 @@ The report is structured across **4 interactive pages**:
 ### 1. 🏢 Executive Operations
 A high-level overview of business performance for leadership and stakeholders.
 
+![Executive Operations Dashboard](executive_operations.jpeg)
+
+| Metric | Value |
+|---|---|
+| Total Revenue | $298.62M |
+| Revenue per Mile | $2.44 |
+| Revenue per Load | $3.50K |
+| Total Loads | 85K |
+
 | Visual Type | Chart / KPI |
 |---|---|
-| KPI Cards | Key revenue and operational metrics |
-| Donut Chart | Revenue by Load Type |
+| KPI Cards | Revenue per Mile, Total Revenue, Revenue per Load, Total Loads |
+| Donut Chart | Revenue by Load Type (Refrigerated vs Dry Van) |
 | Area Chart | Revenue by Month |
 | Map | Revenue by Destination City |
 | Clustered Bar Chart | Revenue by Top 5 Customers |
-| Slicer | Filter by Booking Type |
+| Slicer | Filter by Booking Type (Contract, Dedicated, Spot) |
 
 **Key Questions Answered:**
 - What is the total revenue for the period?
@@ -50,56 +59,83 @@ A high-level overview of business performance for leadership and stakeholders.
 ### 2. 🚗 Fleet Efficiency and Maintenance
 Monitors the health, efficiency, and upkeep of the vehicle fleet.
 
+![Fleet Efficiency and Maintenance Dashboard](fleet_efficiency.jpeg)
+
+| Metric | Value |
+|---|---|
+| Average MPG | 6.50 |
+| Total Fuel Cost | $95.59M |
+| Average Utilization | 83.04% |
+| Total Maintenance Cost | $5.73M |
+
 | Visual Type | Chart / KPI |
 |---|---|
-| KPI Card | Fleet efficiency summary |
+| KPI Cards | Avg MPG, Total Fuel Cost, Avg Utilization %, Total Maintenance Cost |
+| Scatter Chart | Total Fuel Cost by Weight (lbs) |
 | Line Chart | Maintenance Cost by Model Year |
-| Scatter Chart | Efficiency vs. cost relationships |
-| Clustered Column Chart | Fleet performance comparison |
-| Table | Detailed fleet records |
-| Slicer | Fleet filter |
+| Bar Chart | Total Maintenance Cost by Make (Freightliner, Peterbilt, Mack, Volvo, etc.) |
+| Table | Per-truck maintenance breakdown with conditional formatting |
+| Slicer | Filter by Maintenance Type (Brake, Engine, etc.) |
 
 **Key Questions Answered:**
 - Which vehicle model years incur the highest maintenance costs?
-- Is there a correlation between vehicle age and efficiency?
-- Which fleet segments need prioritised attention?
+- Which truck makes are most expensive to maintain?
+- Is there a correlation between vehicle weight and fuel cost?
 
 ---
 
-### 3. 👨‍✈️ Driver Performance and Safety
+### 3. 👩‍✈️ Driver Performance and Safety
 Evaluates individual driver contributions to revenue and safety outcomes.
+
+![Driver Performance and Safety Dashboard](driver_performance.jpeg)
+
+| Metric | Value |
+|---|---|
+| On Time Delivery Rate | 55.7% |
+| Total Incidents | 170 |
+| Total No. of Drivers | 150 |
+| Total Claims Filed | $3M |
 
 | Visual Type | Chart / KPI |
 |---|---|
-| KPI Card | Overall performance indicator |
-| Gauge | Safety performance score |
-| Pivot Table | Driver breakdown by metrics |
-| Clustered Bar Chart | Revenue by Driver |
+| KPI Cards | On Time Delivery %, Total Incidents, Total Drivers, Total Claims |
+| Clustered Bar Chart | Revenue by Driver (Top earner: Thomas Gonzalez) |
 | Scatter Chart | Timely Delivery vs. Damage Cost by Driver |
+| Gauge | Turnover Rate (17%) |
+| Table | Driver-level On Time Delivery Rate & Vehicle Damage Cost |
 
 **Key Questions Answered:**
 - Which drivers generate the most revenue?
 - How does delivery timeliness relate to cargo damage costs?
-- Which drivers pose safety risks that need to be addressed?
+- What is the driver turnover rate and which drivers pose the highest risk?
 
 ---
 
 ### 4. 🌐 Logistics Network and Facility Analytics
 Provides a deep dive into the performance of logistics routes and facilities.
 
+![Logistics Network and Facility Analytics Dashboard](logistics_network.jpeg)
+
+| Metric | Value |
+|---|---|
+| Avg Detention Time | 91.54 hrs |
+| Total Expenses | $101M |
+| Total Profit | $195M |
+| Profit Margin | 65.2% |
+
 | Visual Type | Chart / KPI |
 |---|---|
-| KPI Card | Network performance indicators |
-| Clustered Column Chart | Facility performance comparison |
-| Decomposition Tree | Root cause breakdown of key metrics |
-| Line Chart | Trend analysis over time |
-| Table | Facility-level detail |
-| Slicer | Network filter |
+| KPI Cards | Avg Detention Time, Total Expenses, Total Profit, Profit Margin % |
+| Line Chart | Avg Detention Time by Month |
+| Clustered Column Chart | Avg Detention Time by Facility ID |
+| Decomposition Tree | Drill-down by Driver, Destination City, and Facility Name |
+| Table | Distance, Total Fuel Cost, and Profit Margin per route |
+| Slicer | Filter by Destination City |
 
 **Key Questions Answered:**
-- Which facilities are the most and least efficient?
-- What factors drive performance differences across the network?
-- How do logistics trends evolve over time?
+- Which facilities have the highest detention times?
+- What is the overall profit margin across the network?
+- How do individual drivers and cities affect detention time?
 
 ---
 
@@ -110,7 +146,7 @@ Provides a deep dive into the performance of logistics routes and facilities.
 | Microsoft Power BI | Dashboard design and data visualisation |
 | Power Query (M Language) | Data transformation and cleaning |
 | DAX (Data Analysis Expressions) | Calculated columns and measures |
-| Power BI Map Visual | Geospatial analysis |
+| Power BI Map Visual | Geospatial revenue analysis |
 | Decomposition Tree | AI-powered drill-down analysis |
 
 ---
@@ -118,14 +154,14 @@ Provides a deep dive into the performance of logistics routes and facilities.
 ## 📁 Repository Structure
 
 ```
-📦 logistics-analytics-dashboard/
+📦 Logistic_Analytics_Dashboard/
 ├── 📊 Mamah_Celestina_s_Capstone_project.pbix   # Main Power BI report file
 ├── 📄 README.md                                  # Project documentation (this file)
-└── 📁 assets/                                    # Screenshots of dashboard pages (optional)
-    ├── executive_operations.png
-    ├── fleet_efficiency.png
-    ├── driver_performance.png
-    └── logistics_network.png
+
+    ├── executive_operations.jpeg
+    ├── fleet_efficiency.jpeg
+    ├── driver_performance.jpeg
+    └── logistics_network.jpeg
 ```
 
 ---
@@ -133,36 +169,35 @@ Provides a deep dive into the performance of logistics routes and facilities.
 ## 🚀 How to Open the Project
 
 1. **Install Power BI Desktop** — Download from [Microsoft's official site](https://powerbi.microsoft.com/desktop/)
-2. **Clone this repository:**
-   ```bash
-   git clone https://github.com/YOUR_USERNAME/logistics-analytics-dashboard.git
-   ```
+2. **Download or clone this repository**
 3. **Open the file:** Double-click `Mamah_Celestina_s_Capstone_project.pbix` or open it from within Power BI Desktop
 4. **Explore:** Use the slicers and filters on each page to interact with the data
 
 ---
 
-## 📈 Key Insights (Sample)
+## 📈 Key Insights
 
-- Revenue is segmented across multiple load types, with top customers driving a significant share
-- Maintenance costs vary noticeably by vehicle model year, suggesting an optimal fleet age range
-- Driver performance shows variation in both delivery timeliness and associated damage costs
-- Facility-level analysis via the Decomposition Tree reveals root causes of operational bottlenecks
+- **$298.62M total revenue** generated, with "First Group" as the top customer at ~$9M
+- **Dry Van and Refrigerated** loads split revenue almost equally across booking types
+- **2015 model year trucks** have the highest maintenance costs at $3.67M — suggesting fleet renewal priority
+- **David Miller** has the highest vehicle damage cost ($102K) despite a 55.7% on-time delivery rate
+- **65.2% profit margin** across the logistics network, with total profit of $195M
+- **FAC00040** records the highest average detention time among all facilities at 93.8 hours
 
 ---
 
 ## 👩‍💻 Author
 
-**Mamah Celestina**  
+**Mamah Celestina Nkechi**  
 Data Analytics Capstone Project  
-📧 *nkechicelestina8@gmail.com*  
-🔗 *https://www.linkedin.com/in/celestinankechi *
+📧 *(nkechicelestina8@gmail.com)*  
+🔗 *(https://www.linkedin.com/in/celestinankechi)*
 
 ---
 
 ## 📜 License
 
-This project is created for academic/capstone purposes. All rights reserved © Mamah Celestina.
+This project is created for academic/capstone purposes. All rights reserved © Mamah Celestina Nkechi.
 
 ---
 
